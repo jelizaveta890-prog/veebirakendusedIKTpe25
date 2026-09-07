@@ -42,6 +42,7 @@ section#osa2{
     width: 15%;
 
 }
+
 section#osa3 {
     padding: 4%;
     margin: 5%;
@@ -66,17 +67,22 @@ section#osa5 {
     border-top: 3px dotted lightpink;
     border-right: 3px dotted lightpink;
     border-top-right-radius: 20px;
+
 }
-img{
-    max-width: 100%;
-    border-radius: 50%;
-}
+
 /*navigeerimis menüü*/
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: lightpink;
+
+    img#erapilt{
+        width: 100%;
+        border-radius: 50%;
+        border: 5px solid lightcoral;
+    }
+
 }
 nav ul li{
     float: left;
@@ -91,11 +97,43 @@ nav ul li a {
     border-radius: 50%;
 }
 
- nav{
+ nav {
     padding: 5%;
      margin: 20px;
 }
  nav ul li a:hover{
      background-color: lightpink;
  }
+#suurkast{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*suurus 2 x 2*/
+    gap: 10px;
+}
+#pildigalerii{
+    border: 1px solid lightcoral;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fffbfb;
+}
+#video{
+    border: 1px solid lightcoral;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fffbfb;
+}
+#muusika{
+    border: 1px solid lightcoral;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fffbfb;
+
+}
+#kaart{
+    border: 1px solid lightcoral;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fffbfb;
+}
+
+
 
