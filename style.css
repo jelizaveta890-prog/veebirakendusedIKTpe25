@@ -1,0 +1,101 @@
+/*kommentaar*/
+h1{
+    font-variant: small-caps;
+    font-size: xx-large;
+    color: purple; /*teksti värv*/
+    background: transparent; /*tausta värv*/
+}
+header{
+    padding: 5%;
+    background-color: lightpink;
+    border-left: 3px solid lightpink;
+    border-bottom: 3px dotted purple;
+    border-radius: 0 0 0 60px ;
+    background-image: url('Lill.png');
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+footer{
+    padding: 5%;
+    background-color: lightpink;
+    border-left: 3px solid lightpink;
+    border-top: 3px dotted purple;
+    border-radius:  60px 0 0 0;
+}
+section#osa1{
+    padding: 5%;
+    border: 1px solid purple; /*dotted, dashed, double, outline, groove*/
+    margin: 5%;
+    width: 25%;
+    /*
+    kirjuta iga section (osa3, osa4, osa5)
+    oma kujundusega mis kasutab erinevaid ääriseid,
+    värvi, raam võiks olla ainult ühelt poolt jne
+    */
+
+}
+section#osa2{
+    padding: 5%;
+    border: 1px solid green;
+    margin: 5%;
+    width: 15%;
+
+}
+section#osa3 {
+    padding: 4%;
+    margin: 5%;
+    width: 30%;
+    background-color: #f9f0ff;
+    border-bottom: 4px double purple;
+}
+
+section#osa4 {
+    padding: 6%;
+    margin: 5%;
+    width: 20%;
+    background-color: #f0f8ff;
+    border-left: 5px dashed dimgray;
+}
+
+section#osa5 {
+    padding: 3%;
+    margin: 5%;
+    width: 40%;
+    background-color: #fff0f5;
+    border-top: 3px dotted lightpink;
+    border-right: 3px dotted lightpink;
+    border-top-right-radius: 20px;
+}
+img{
+    max-width: 100%;
+    border-radius: 50%;
+}
+/*navigeerimis menüü*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightpink;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: dimgray;
+    text-decoration: none;/*link on alljoonita */
+    text-align: center;/*teeksti joondamine keskel*/
+    padding: 10px;
+   border-left: 3px solid lightpink ;
+    border-radius: 50%;
+}
+
+ nav{
+    padding: 5%;
+     margin: 20px;
+}
+ nav ul li a:hover{
+     background-color: lightpink;
+ }
+
