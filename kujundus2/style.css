@@ -2,7 +2,6 @@
    1. TAUST JA ÜLDISED STIILID
    ========================================== */
 body {
-    /* Mitmetooniline värske gradient-taust */
     background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
     background-attachment: fixed;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -37,7 +36,7 @@ h1 {
 }
 
 /* ==========================================
-   3. VERTIKAALNE MENÜÜ (Lisatud värvi ja detaile)
+   3. VERTIKAALNE MENÜÜ
    ========================================== */
 nav {
     width: 230px;
@@ -84,7 +83,6 @@ nav ul li a {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Linkide põnev suvand peale liikumisel */
 nav ul li a:hover {
     background: linear-gradient(90deg, #eff6ff 0%, #e0e7ff 100%);
     color: #4f46e5;
@@ -94,7 +92,7 @@ nav ul li a:hover {
 }
 
 /* ==========================================
-   4. SISUOSAD (SECTIONID) - Värvilised servad
+   4. SISUOSAD (SECTIONID)
    ========================================== */
 section#osa1, section#osa2, section#osa3, section#osa4, section#osa5 {
     margin-left: 280px;
@@ -103,21 +101,21 @@ section#osa1, section#osa2, section#osa3, section#osa4, section#osa5 {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border: 1px solid #ffffff;
     position: relative;
 }
 
 section#osa1 {
-    border-left: 8px solid #4f46e5; /* Lilla-sinine */
+    border-left: 8px solid #4f46e5;
 }
 
+/* KAST GITHUB TEKSTI ÜMBER (SIIN ON LISATUD RAAM) */
 section#osa2 {
-    border-left: 8px solid #06b6d4; /* Tsüaan */
+    border: 2px dashed #7c3aed; /* Lilla katkendlik raam */
     background: linear-gradient(135deg, #ffffff 0%, #ecfeff 100%);
 }
 
 section#osa3 {
-    border-left: 8px solid #ec4899; /* Erksakujuline roosa */
+    border-left: 8px solid #ec4899;
 }
 
 section#osa4 {
@@ -125,7 +123,7 @@ section#osa4 {
 }
 
 section#osa5 {
-    border-top: 5px solid #10b981; /* Smaragdroheline */
+    border-top: 5px solid #10b981;
     border-radius: 4px 20px 20px 20px;
 }
 
@@ -184,4 +182,15 @@ footer {
     border-radius: 16px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     font-weight: 600;
+}
+#github-kast {
+    margin-left: 280px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+
+    /* ÄÄRIS / BORDER */
+    border: 2px dashed #7c3aed; /* Lilla katkendlik raam */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
