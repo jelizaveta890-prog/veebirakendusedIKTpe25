@@ -42,64 +42,72 @@ table#roheline td{
     background-color: grey;
 }
 
-/* Lisage või asendage see kood oma <style> märgendite vahel */
+
 #pink {
     border-collapse: separate;
-    border-spacing: 2px; /* Teeb lahtrite vahele valged vahed */
-    width: 600px;        /* Määrab tabeli kindla laiuse, et see kokku ei vajuks */
+    border-spacing: 2px;
+    width: 600px;
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
 #pink td {
-    height: 50px;        /* Annab lahtritele kõrguse, et need oleksid kastid */
+    height: 50px;
     font-weight: bold;
     color: black;
 }
 
-/* 1. RIDA */
-/* Lahter 1 (Tumeorheline) */
+
 #pink tr:nth-child(1) td:nth-child(1) {
     background-color: #1e7311;
-    width: 25%;          /* Määrab esimesele tulbale kindla laia ruumi */
+    width: 25%;
 }
-/* Lahter 2 (Kollane) */
+
 #pink tr:nth-child(1) td:nth-child(2) {
     background-color: yellow;
 }
 
-/* 2. RIDA */
-/* Lahter 4 (Punane) */
+
+
 #pink tr:nth-child(2) td:nth-child(1) {
     background-color: red;
 }
-/* Lahter 5 (Punane) */
+
 #pink tr:nth-child(2) td:nth-child(2) {
     background-color: red;
 }
 
-/* 3. RIDA */
-/* Lahter 6 (Sinine) */
+
 #pink tr:nth-child(3) td:nth-child(1) {
     background-color: blue;
 }
-/* Lahter 7 (Sinine) */
+
 #pink tr:nth-child(3) td:nth-child(2) {
     background-color: blue;
 }
-/* Lahter 8 (Heleroheline) */
+
 #pink tr:nth-child(3) td:nth-child(3) {
     background-color: lightgreen;
 }
 
-/* 4. RIDA */
-/* Lahter 9 (Lilla) */
+
 #pink tr:nth-child(4) td:nth-child(1) {
     background-color: purple;
 }
-/* Lahter 10 (Lilla) */
+
 #pink tr:nth-child(4) td:nth-child(2) {
     background-color: purple;
 }
 
 
+#isesesev {
+    border-collapse: collapse;
+}
+
+#isesesev td {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+}

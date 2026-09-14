@@ -1,9 +1,19 @@
+h1#lipud{
+    position: absolute;
+    top: 0;
+    left: 60%;
+
+}
+
 #eesti{
     width: 330px;
     height: 210px;
     border: 1px solid grey;
     border-spacing: 0;
     /*border-collapse: collapse;*/
+    position: absolute;
+    top: 60px;
+    left:60%
 }
 #eesti tr:nth-child(1){
     background-color: blue;
@@ -14,3 +24,83 @@
 #eesti tr:nth-child(3){
     background-color: white;
 }
+
+#rootsi{
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    /*border-collapse: collapse;*/
+    position: absolute;
+    top: 310px;
+    left: 60%
+}
+#rootsi tr:nth-child(2){/*2.rida*/
+    background-color: gold;
+}
+#rootsi tr:nth-child(1) td:nth-child(1),
+#rootsi tr:nth-child(3) td:nth-child(1) {
+    background-color: blue;
+    width: 100px;
+}
+#rootsi tr:nth-child(1) td:nth-child(3),
+#rootsi tr:nth-child(3) td:nth-child(3) {
+    background-color: blue;
+    width: 175px;
+}
+#rootsi tr:nth-child(1) td:nth-child(2),
+#rootsi tr:nth-child(3) td:nth-child(2) {
+    background-color: gold;
+
+}
+
+#Šveitsi {
+    border-collapse: collapse;
+    background-color: red;
+    position: absolute;
+    top: 560px;
+    left: 60%;
+}
+
+#Šveitsi td {
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+#Šveitsi tr:nth-child(2) td:nth-child(3) {
+    background-color: white;
+}
+
+#Šveitsi tr:nth-child(3) td:nth-child(2),
+#Šveitsi tr:nth-child(3) td:nth-child(3),
+#Šveitsi tr:nth-child(3) td:nth-child(4) {
+    background-color: white;
+}
+
+#Šveitsi tr:nth-child(4) td:nth-child(3) {
+    background-color: white;
+}
+#itaalia {
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    border-collapse: collapse;
+    position: absolute;
+    top: 860px;
+    left: 60%;
+}
+
+#itaalia td:nth-child(1) {
+    background-color: #009246;
+}
+
+#itaalia td:nth-child(2) {
+    background-color: #f1f2f1;
+}
+
+#itaalia td:nth-child(3) {
+    background-color: #ce2b37;
+}
+
