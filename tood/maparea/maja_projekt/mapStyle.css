@@ -1,0 +1,50 @@
+div#selgitus{
+    background-color: lightgray;
+    width: 30%;
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    padding: 5%;
+}
+img{
+    border:3px solid lightgray;
+    border-radius: 80%;
+}
+
+img {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#selgitus {
+    padding: 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+img {
+    display: block;
+    border: 3px solid lightgray;
+    border-radius: 80%;
+}
+#selgitus {
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    background-color: lightgray;
+    padding: 20px;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    margin-bottom: 20px;
+    border: 3px solid lightgray;
+    border-radius: 80%;
+}
