@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paberiülesanne</title>
+</head>
+
+<body>
+
+<h1>sisukord</h1>
+
+<a href="#tabel">Tabel</a><br>
+<a href="#loetelu">Loetelu</a>
+
+<h1>pealkiri</h1>
+
+<p>see on lõik</p>
+<p>see on teine lõik</p>
+
+<p>
+  siin on siis<br>
+  reavahetusega<br>
+  ning uuesti
+</p>
+
+<style>
+  table {
+    width: 500px;
+    height: 170px;
+  }
+
+  td {
+    border: 2px solid black;
+    padding: 15px;
+    vertical-align: top;
+  }
+
+  td:nth-child(2) {
+    text-align: center;
+    vertical-align: middle;
+  }
+</style>
+
+<table border="1" bordercolor="black" id="tabel">
+  <caption>Tabel</caption>
+
+  <tr>
+    <td>esimene lahter</td>
+    <td rowspan="2">ühendatud<br>lahter</td>
+    <td>kolmas lahter</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>neljas lahter</td>
+    <td>viies lahter</td>
+    <td>kuues lahter</td>
+  </tr>
+</table>
+
+
+<h2 id="loetelu">Järjestamata loetelu</h2>
+
+<ul>
+  <li>tärrnid</li>
+  <li>jah</li>
+  <li>ok</li>
+</ul>
+
+<ul type="square">
+  <li>isegi ruudud töötavad</li>
+  <li>heh</li>
+  <li>nii nüüd järjestatud joondus</li>
+</ul>
+
+<h2>Pesastus</h2>
+
+<ul>
+  <li>Töötab</li>
+  <li>Tore</li>
+  <li>
+    edukas
+    <ul type="disc">
+      <li>pesastus</li>
+      <li>heh</li>
+      <li>nii nüüd järjestatud joondus</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Järjestatud loetelu</h2>
+
+<ol>
+  <li>numbritega loendus</li>
+  <li>teine rida</li>
+</ol>
+
+<ol type="A">
+  <li>loend siis tähtedega</li>
+  <li>siia samuti teine rida</li>
+</ol>
+
+<ol type="I">
+  <li>pesastus</li>
+  <li>rooma numbrid</li>
+</ol>
+
+<a href="#Koolikoduleht">Koolikoduleht</a><br>
+<a href="#Sisukord">Sisukord</a>
+
+</body>
+</html>
