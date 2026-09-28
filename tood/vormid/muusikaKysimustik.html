@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <title>Muusikaküsitlus</title>
+  <script src="ankeetScript.js" defer></script>
+</head>
+<body>
+
+<h1>Muusikaküsitlus</h1>
+
+<form id="ankeetForm">
+  <table border="1" style="border-collapse: collapse; width: 100%;">
+    <tr>
+      <th>Küsimus</th>
+      <th>Vastus</th>
+      <th>Tulemus</th>
+    </tr>
+
+    <!-- 1. Checkboxid -->
+    <tr>
+      <td>1. Milliseid ansambleid tead?</td>
+      <td>
+        <input type="checkbox" id="smilers" value="Smilers" onchange="baendiValik()"> Smilers<br>
+        <input type="checkbox" id="terminaator" value="Terminaator" onchange="baendiValik()"> Terminaator<br>
+        <input type="checkbox" id="b200" value="200" onchange="baendiValik()"> 200
+      </td>
+      <td id="vastus1"></td>
+    </tr>
+
+    <!-- 2. Textarea -->
+    <tr>
+      <td>2. Mida arvad muusikast koolis?</td>
+      <td>
+        <textarea id="arvamus" rows="2" oninput="arvamusValik()"></textarea>
+      </td>
+      <td id="vastus2"></td>
+    </tr>
+
+    <!-- 3. Number -->
+    <tr>
+      <td>3. Mitu tundi päevas kuulad muusikat?</td>
+      <td>
+        <input type="number" id="tunnid" value="0" oninput="tundiValik()">
+      </td>
+      <td id="vastus3"></td>
+    </tr>
+
+    <!-- 4. Raadionupud -->
+    <tr>
+      <td>4. Kas sa kuulad raadiot?</td>
+      <td>
+        <input type="radio" id="raadioJah" name="raadio" value="Jah" onchange="raadioValik()"> Jah
+        <input type="radio" id="raadioEi" name="raadio" value="Ei" onchange="raadioValik()"> Ei
+      </td>
+      <td id="vastus4"></td>
+    </tr>
+
+    <!-- 5. Tekstikast -->
+    <tr>
+      <td>5. Mis raadiojaamu tead?</td>
+      <td>
+        <input type="text" id="jaamad" oninput="jaamaValik()">
+      </td>
+      <td id="vastus5"></td>
+    </tr>
+
+    <!-- 6. Valikmenüü -->
+    <tr>
+      <td>6. Mis muusikastiili kuulad enim?</td>
+      <td>
+        <select id="stiil" onchange="stiiliValik()">
+          <option value="">- Vali -</option>
+          <option value="Rock">Rock</option>
+          <option value="Pop">Pop</option>
+          <option value="Rap">Rap</option>
+          <option value="Jazz">Jazz</option>
+          <option value="Klassika">Klassika</option>
+          <option value="Elektrooniline">Elektrooniline</option>
+        </select>
+      </td>
+      <td id="vastus6"></td>
+    </tr>
+
+    <tr>
+      <td>
+        <button type="button" onclick="puhasta()">Puhasta</button>
+      </td>
+      <td>
+        <button type="button" onclick="saada()">Saada</button>
+      </td>
+      <td id="vastus7" style="background-color: yellow;"></td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>
