@@ -13,7 +13,7 @@ body {
 
 h1 {
     color: #ffffff;
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 25px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     letter-spacing: 0.5px;
@@ -27,12 +27,12 @@ table {
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 650px;
+    max-width: 900px;
     overflow: hidden;
 }
 
 td {
-    padding: 14px 18px;
+    padding: 16px 22px;
     border-bottom: 1px solid #edf2f7;
     vertical-align: middle;
 }
@@ -44,7 +44,7 @@ tr:last-child td {
 td:first-child {
     font-weight: 600;
     color: #4a5568;
-    width: 45%;
+    width: 40%;
 }
 
 input[type="text"], textarea, select {
@@ -93,7 +93,7 @@ input[type="reset"]:hover {
 }
 
 img {
-    max-width: 120px;
+    max-width: 240px;
     border-radius: 8px;
     display: block;
     margin-top: 8px;

@@ -30,7 +30,6 @@ function muusikaMuutus(viimaneValik) {
     return tekst;
 }
 
-
 function koolMuutus() {
     let sisend = document.getElementById("kool");
     let vastus = document.getElementById("koolVastus");
@@ -43,7 +42,12 @@ function koolMuutus() {
     }
 
     if (pilt) {
-        pilt.style.display = "none";
+        if (sisend.value.trim() !== "") {
+            pilt.src = "muusikapilt6.jpg";
+            pilt.style.display = "block";
+        } else {
+            pilt.style.display = "none";
+        }
     }
     return sisend.value;
 }
@@ -60,7 +64,12 @@ function tunnidMuutus() {
     }
 
     if (pilt) {
-        pilt.style.display = "none";
+        if (parseInt(sisend.value) > 0) {
+            pilt.src = "muusikapilt7.jpg";
+            pilt.style.display = "block";
+        } else {
+            pilt.style.display = "none";
+        }
     }
     return sisend.value;
 }
@@ -81,7 +90,15 @@ function raadioMuutus(valik) {
     }
 
     if (pilt) {
-        pilt.style.display = "none";
+        if (olek === "jah") {
+            pilt.src = "muusikapilt4.jpg";
+            pilt.style.display = "block";
+        } else if (olek === "ei") {
+            pilt.src = "muusikapilt5.jpg";
+            pilt.style.display = "block";
+        } else {
+            pilt.style.display = "none";
+        }
     }
     return olek;
 }
@@ -98,7 +115,12 @@ function jaamadMuutus() {
     }
 
     if (pilt) {
-        pilt.style.display = "none";
+        if (sisend.value.trim() !== "") {
+            pilt.src = "muusikapilt8.jpg";
+            pilt.style.display = "block";
+        } else {
+            pilt.style.display = "none";
+        }
     }
     return sisend.value;
 }
@@ -117,7 +139,12 @@ function stiilMuutus() {
     }
 
     if (pilt) {
-        pilt.style.display = "none";
+        if (väärtus !== "") {
+            pilt.src = "muusikapilt9.jpg";
+            pilt.style.display = "block";
+        } else {
+            pilt.style.display = "none";
+        }
     }
     return väärtus;
 }
