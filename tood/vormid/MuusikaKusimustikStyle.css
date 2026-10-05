@@ -1,0 +1,67 @@
+body {
+    font-family: sans-serif;
+    background: #f0f4f8;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    color: #3d77ff;
+}
+
+table {
+    background: white;
+    border-collapse: collapse;
+    width: 600px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+}
+
+td:first-child {
+    font-weight: bold;
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #cbd5e1;
+}
+
+input:hover, textarea:hover, select:hover {
+    border-color: #3d77ff;
+}
+
+input[type="button"], input[type="reset"] {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+input[type="button"] {
+    background: #3d77ff;
+    color: white;
+}
+
+input[type="reset"] {
+    background: #cbd5e1;
+    color: #333;
+}
+
+.kastAktiivne {
+    background: #3d77ff;
+    color: white;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+img {
+    max-width: 120px;
+    display: block;
+    margin-top: 5px;
+}
