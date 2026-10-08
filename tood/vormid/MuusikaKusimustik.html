@@ -1,110 +1,243 @@
 <!DOCTYPE html>
 <html lang="et">
+
 <head>
   <meta charset="UTF-8">
-  <title>Küsitlusleht</title>
+  <title>Muusikaküsitlus</title>
+
   <script src="../js/MuusikaKusimustikScript.js"></script>
   <link rel="stylesheet" href="MuusikaKusimustikStyle.css">
-  <style>
-
-    td:nth-child(3) {
-      padding-left: 25px;
-      vertical-align: middle;
-      width: 250px;
-    }
-    td img {
-      max-height: 240px;
-      width: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-  </style>
 </head>
+
 <body>
 
 <h1>Muusikaküsitlus</h1>
+
 <form id="ankeet">
+
   <table>
+
     <tr>
       <td>Milliseid muusikuid/ansambleid sa tead?</td>
+
       <td>
-        <input type="checkbox" name="valik" id="m1" value="Terminaator" onchange="muusikaMuutus('1')">
-        <label for="m1">Terminaator</label><br>
-        <input type="checkbox" name="valik" id="m2" value="Smilers" onchange="muusikaMuutus('2')">
-        <label for="m2">Smilers</label><br>
-        <input type="checkbox" name="valik" id="m3" value="Anne Veski" onchange="muusikaMuutus('3')">
-        <label for="m3">Anne Veski</label><br>
-        <input type="checkbox" name="valik" id="m4" value="5MIINUST" onchange="muusikaMuutus('1')">
-        <label for="m4">5MIINUST</label><br>
-        <input type="checkbox" name="valik" id="m5" value="Tommy Cash" onchange="muusikaMuutus('2')">
+        <input type="checkbox"
+               name="valik"
+               id="m1"
+               value="Terminaator"
+               onchange="muusikaMuutus('1')">
+        <label for="m1">Terminaator</label>
+        <br>
+
+        <input type="checkbox"
+               name="valik"
+               id="m2"
+               value="Smilers"
+               onchange="muusikaMuutus('2')">
+        <label for="m2">Smilers</label>
+        <br>
+
+        <input type="checkbox"
+               name="valik"
+               id="m3"
+               value="Anne Veski"
+               onchange="muusikaMuutus('3')">
+        <label for="m3">Anne Veski</label>
+        <br>
+
+        <input type="checkbox"
+               name="valik"
+               id="m4"
+               value="5MIINUST"
+               onchange="muusikaMuutus('4')">
+        <label for="m4">5MIINUST</label>
+        <br>
+
+        <input type="checkbox"
+               name="valik"
+               id="m5"
+               value="Tommy Cash"
+               onchange="muusikaMuutus('5')">
         <label for="m5">Tommy Cash</label>
+
         <div id="muusikaVastus"></div>
       </td>
-      <td><img id="pilt1" src="" alt="pilt" style="display: none;"></td>
-    </tr>
-    <tr>
-      <td><label for="kool">Mida arvad muusika kuulamisest koolis?</label></td>
+
       <td>
-        <textarea id="kool" oninput="koolMuutus()"></textarea>
+        <img id="pilt1"
+             src=""
+             alt="pilt"
+             style="display: none;">
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <label for="kool">
+          Mida arvad muusika kuulamisest koolis?
+        </label>
+      </td>
+
+      <td>
+                <textarea id="kool"
+                          oninput="koolMuutus()"></textarea>
+
         <div id="koolVastus"></div>
       </td>
-      <td><img id="pilt2" src="" alt="pilt" style="display: none;"></td>
-    </tr>
-    <tr>
-      <td><label for="tunnid">Mitu tundi päevas sa kuulad muusikat?</label></td>
+
       <td>
-        <input type="range" id="tunnid" min="0" max="24" value="0" oninput="tunnidMuutus()">
+        <img id="pilt2"
+             src=""
+             alt="pilt"
+             style="display: none;">
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <label for="tunnid">
+          Mitu tundi päevas sa kuulad muusikat?
+        </label>
+      </td>
+
+      <td>
+        <input type="range"
+               id="tunnid"
+               min="0"
+               max="24"
+               value="0"
+               oninput="tunnidMuutus()">
+
         <div id="tunnidVastus"></div>
       </td>
-      <td><img id="pilt3" src="" alt="pilt" style="display: none;"></td>
+
+      <td>
+        <img id="pilt3"
+             src=""
+             alt="pilt"
+             style="display: none;">
+      </td>
     </tr>
+
+
     <tr>
       <td>Kas sa kuulad raadiot?</td>
+
       <td>
-        <input type="radio" name="raadio" id="rJah" value="jah" onclick="raadioMuutus(this.value)">
-        <label for="rJah">jah</label><br>
-        <input type="radio" name="raadio" id="rEi" value="ei" onclick="raadioMuutus(this.value)">
+        <input type="radio"
+               name="raadio"
+               id="rJah"
+               value="jah"
+               onclick="raadioMuutus()">
+
+        <label for="rJah">jah</label>
+        <br>
+
+        <input type="radio"
+               name="raadio"
+               id="rEi"
+               value="ei"
+               onclick="raadioMuutus()">
+
         <label for="rEi">ei</label>
+
         <div id="raadioVastus"></div>
       </td>
-      <td><img id="pilt4" src="" alt="pilt" style="display: none;"></td>
-    </tr>
-    <tr>
-      <td><label for="jaamad">Milliseid raadiojaamu oskad nimetada?</label></td>
+
       <td>
-        <input type="text" id="jaamad" oninput="jaamadMuutus()">
+        <img id="pilt4"
+             src=""
+             alt="pilt"
+             style="display: none;">
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <label for="jaamad">
+          Milliseid raadiojaamu oskad nimetada?
+        </label>
+      </td>
+
+      <td>
+        <input type="text"
+               id="jaamad"
+               oninput="jaamadMuutus()">
+
         <div id="jaamadVastus"></div>
       </td>
-      <td><img id="pilt5" src="" alt="pilt" style="display: none;"></td>
-    </tr>
-    <tr>
-      <td><label for="stiil">Millist muusikat sa kõige rohkem kuulad?</label></td>
+
       <td>
-        <select id="stiil" onchange="stiilMuutus()">
+        <img id="pilt5"
+             src=""
+             alt="pilt"
+             style="display: none;">
+      </td>
+    </tr>
+
+
+    <tr>
+      <td>
+        <label for="stiil">
+          Millist muusikat sa kõige rohkem kuulad?
+        </label>
+      </td>
+
+      <td>
+        <select id="stiil"
+                onchange="stiilMuutus()">
+
           <option value="Vali">Vali...</option>
           <option value="Pop">Pop</option>
           <option value="Rock">Rock</option>
           <option value="Räp">Räp</option>
           <option value="Jazz">Jazz</option>
           <option value="Klassika">Klassika</option>
-          <option value="Elektrooniline">Elektrooniline</option>
+          <option value="Elektrooniline">
+            Elektrooniline
+          </option>
+
         </select>
+
         <div id="stiilVastus"></div>
       </td>
-      <td><img id="pilt6" src="" alt="pilt" style="display: none;"></td>
+
+      <td>
+        <img id="pilt6"
+             src=""
+             alt="pilt"
+             style="display: none;">
+      </td>
     </tr>
+
+
     <tr>
       <td>Tegevused</td>
+
       <td>
         <div class="nupud">
-          <input type="reset" value="Puhasta" onclick="vormPuhasta()">
-          <input type="button" value="Saada" onclick="vormSaada()">
+
+          <input type="reset"
+                 value="Puhasta"
+                 onclick="vormPuhasta()">
+
+          <input type="button"
+                 value="Saada"
+                 onclick="vormSaada()">
+
         </div>
+
         <div id="kokkuvote"></div>
       </td>
+
       <td></td>
     </tr>
+
   </table>
+
 </form>
 
 </body>

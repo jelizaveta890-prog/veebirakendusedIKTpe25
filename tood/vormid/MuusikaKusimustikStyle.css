@@ -1,100 +1,53 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
-    margin: 0;
-    padding: 30px 15px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #2d3748;
+    background-color: #7c93e5;
+    font-family: Arial;
 }
 
 h1 {
-    color: #ffffff;
-    font-size: 32px;
-    margin-bottom: 25px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    letter-spacing: 0.5px;
+    text-align: center;
 }
 
 table {
-    background-color: #ffffff;
-    border-collapse: separate;
-    border-spacing: 0;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 900px;
-    overflow: hidden;
+    width: 800px;
+    margin: auto;
+    background-color: #aff6f0;
+    border-collapse: collapse;
 }
 
 td {
-    padding: 16px 22px;
-    border-bottom: 1px solid #edf2f7;
-    vertical-align: middle;
+    border: 1px solid black;
+    padding: 10px;
 }
 
-tr:last-child td {
-    border-bottom: none;
+input[type="text"] {
+    width: 200px;
 }
 
-td:first-child {
-    font-weight: 600;
-    color: #4a5568;
-    width: 40%;
+textarea {
+    width: 200px;
+    height: 70px;
 }
 
-input[type="text"], textarea, select {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #cbd5e0;
-    border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 14px;
-    transition: border-color 0.2s, box-shadow 0.2s;
+select {
+    width: 210px;
+    padding: 5px;
 }
 
-input[type="text"]:focus, textarea:focus, select:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+input[type="range"] {
+    width: 200px;
 }
 
-input[type="button"], input[type="reset"], button {
-    padding: 8px 18px;
-    border-radius: 6px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.1s, background-color 0.2s;
-}
-
-input[type="button"], button {
-    background-color: #667eea;
-    color: white;
-}
-
-input[type="button"]:hover, button:hover {
-    background-color: #5a67d8;
-    transform: translateY(-1px);
-}
-
+input[type="button"],
 input[type="reset"] {
-    background-color: #e2e8f0;
-    color: #4a5568;
-    margin-right: 8px;
-}
-
-input[type="reset"]:hover {
-    background-color: #cbd5e0;
+    padding: 5px 10px;
+    margin: 5px;
 }
 
 img {
-    max-width: 240px;
-    border-radius: 8px;
-    display: block;
-    margin-top: 8px;
+    max-width: 200px;
+    max-height: 240px;
+}
+
+.nupud {
+    text-align: center;
 }

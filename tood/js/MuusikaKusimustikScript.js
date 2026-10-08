@@ -5,149 +5,131 @@ function muusikaMuutus(viimaneValik) {
 
     for (let i = 1; i <= 5; i++) {
         let bänd = document.getElementById("m" + i);
-        if (bänd && bänd.checked) {
+
+        if (bänd.checked) {
             tekst += bänd.value + ", ";
         }
     }
 
-    if (tekst === "") {
-        if (vastus) vastus.innerHTML = "Sinu valitud muusikud: ";
-        if (pilt) pilt.style.display = "none";
+    if (tekst == "") {
+        vastus.innerHTML = "Sinu valitud muusikud: ";
+        pilt.style.display = "none";
     } else {
         tekst = tekst.slice(0, -2);
-        if (vastus) vastus.innerHTML = "Sinu valitud muusikud: " + tekst;
+        vastus.innerHTML = "Sinu valitud muusikud: " + tekst;
 
-        if (viimaneValik && pilt) {
+        if (viimaneValik) {
             pilt.src = "muusikapilt" + viimaneValik + ".jpg";
             pilt.style.display = "block";
-
-            pilt.onerror = function() {
-                this.src = "muusikapilt1.jpg";
-            };
         }
     }
-    if (vastus) vastus.style.color = "#3d77ff";
+
     return tekst;
 }
+
 
 function koolMuutus() {
     let sisend = document.getElementById("kool");
     let vastus = document.getElementById("koolVastus");
     let pilt = document.getElementById("pilt2");
 
-    if (!sisend) return "";
-    if (vastus) {
-        vastus.innerHTML = "Sinu arvamus: " + sisend.value;
-        vastus.style.color = "#3d77ff";
+    vastus.innerHTML = "Sinu arvamus: " + sisend.value;
+
+    if (sisend.value != "") {
+        pilt.src = "muusikapilt6.jpg";
+        pilt.style.display = "block";
+    } else {
+        pilt.style.display = "none";
     }
 
-    if (pilt) {
-        if (sisend.value.trim() !== "") {
-            pilt.src = "muusikapilt6.jpg";
-            pilt.style.display = "block";
-        } else {
-            pilt.style.display = "none";
-        }
-    }
     return sisend.value;
 }
+
 
 function tunnidMuutus() {
     let sisend = document.getElementById("tunnid");
     let vastus = document.getElementById("tunnidVastus");
     let pilt = document.getElementById("pilt3");
 
-    if (!sisend) return "0";
-    if (vastus) {
-        vastus.innerHTML = "Sa kuulad muusikat " + sisend.value + " tundi päevas";
-        vastus.style.color = "#3d77ff";
+    vastus.innerHTML =
+        "Sa kuulad muusikat " + sisend.value + " tundi päevas";
+
+    if (sisend.value > 0) {
+        pilt.src = "muusikapilt7.jpg";
+        pilt.style.display = "block";
+    } else {
+        pilt.style.display = "none";
     }
 
-    if (pilt) {
-        if (parseInt(sisend.value) > 0) {
-            pilt.src = "muusikapilt7.jpg";
-            pilt.style.display = "block";
-        } else {
-            pilt.style.display = "none";
-        }
-    }
     return sisend.value;
 }
 
-function raadioMuutus(valik) {
+
+function raadioMuutus() {
     let vastus = document.getElementById("raadioVastus");
     let pilt = document.getElementById("pilt4");
-    let j = document.getElementById("rJah");
-    let e = document.getElementById("rEi");
+
+    let jah = document.getElementById("rJah");
+    let ei = document.getElementById("rEi");
+
     let olek = "";
 
-    if (j && j.checked) olek = j.value;
-    else if (e && e.checked) olek = e.value;
-
-    if (vastus) {
-        vastus.innerHTML = "Raadio kuulamine: " + (olek || "valimata");
-        vastus.style.color = "#3d77ff";
+    if (jah.checked) {
+        olek = jah.value;
+        pilt.src = "muusikapilt4.jpg";
+        pilt.style.display = "block";
+    } else if (ei.checked) {
+        olek = ei.value;
+        pilt.src = "muusikapilt5.jpg";
+        pilt.style.display = "block";
     }
 
-    if (pilt) {
-        if (olek === "jah") {
-            pilt.src = "muusikapilt4.jpg";
-            pilt.style.display = "block";
-        } else if (olek === "ei") {
-            pilt.src = "muusikapilt5.jpg";
-            pilt.style.display = "block";
-        } else {
-            pilt.style.display = "none";
-        }
+    if (olek == "") {
+        olek = "valimata";
     }
+
+    vastus.innerHTML = "Raadio kuulamine: " + olek;
+
     return olek;
 }
+
 
 function jaamadMuutus() {
     let sisend = document.getElementById("jaamad");
     let vastus = document.getElementById("jaamadVastus");
     let pilt = document.getElementById("pilt5");
 
-    if (!sisend) return "";
-    if (vastus) {
-        vastus.innerHTML = "Sinu nimetatud jaamad: " + sisend.value;
-        vastus.style.color = "#3d77ff";
+    vastus.innerHTML =
+        "Sinu nimetatud jaamad: " + sisend.value;
+
+    if (sisend.value != "") {
+        pilt.src = "muusikapilt8.jpg";
+        pilt.style.display = "block";
+    } else {
+        pilt.style.display = "none";
     }
 
-    if (pilt) {
-        if (sisend.value.trim() !== "") {
-            pilt.src = "muusikapilt8.jpg";
-            pilt.style.display = "block";
-        } else {
-            pilt.style.display = "none";
-        }
-    }
     return sisend.value;
 }
+
 
 function stiilMuutus() {
     let sisend = document.getElementById("stiil");
     let vastus = document.getElementById("stiilVastus");
     let pilt = document.getElementById("pilt6");
 
-    if (!sisend) return "";
-    let väärtus = sisend.value === "Vali" ? "" : sisend.value;
-
-    if (vastus) {
-        vastus.innerHTML = "Sinu vastus: " + väärtus;
-        vastus.style.color = "#3d77ff";
+    if (sisend.value == "Vali") {
+        vastus.innerHTML = "Palun vali muusikastiil";
+        pilt.style.display = "none";
+    } else {
+        vastus.innerHTML = "Sinu vastus: " + sisend.value;
+        pilt.src = "muusikapilt9.jpg";
+        pilt.style.display = "block";
     }
 
-    if (pilt) {
-        if (väärtus !== "") {
-            pilt.src = "muusikapilt9.jpg";
-            pilt.style.display = "block";
-        } else {
-            pilt.style.display = "none";
-        }
-    }
-    return väärtus;
+    return sisend.value;
 }
+
 
 function vormSaada() {
     let m = muusikaMuutus();
@@ -156,34 +138,32 @@ function vormSaada() {
     let r = raadioMuutus();
     let j = jaamadMuutus();
     let s = stiilMuutus();
-    let ala = document.getElementById("kokkuvote");
 
-    if (ala) {
-        ala.innerHTML = "Valitud muusikud: " + (m || "-") + "<br>"
-            + "Arvamus koolis: " + (k || "-") + "<br>"
-            + "Kuulamise tunnid: " + t + "<br>"
-            + "Raadio kuulamine: " + (r || "-") + "<br>"
-            + "Nimetatud jaamad: " + (j || "-") + "<br>"
-            + "Eelistatud stiil: " + (s || "-");
-        ala.className = "kastAktiivne";
-    }
+    let kokkuvote = document.getElementById("kokkuvote");
+
+    kokkuvote.innerHTML =
+        "Valitud muusikud: " + m + "<br>" +
+        "Arvamus koolis: " + k + "<br>" +
+        "Kuulamise tunnid: " + t + "<br>" +
+        "Raadio kuulamine: " + r + "<br>" +
+        "Nimetatud jaamad: " + j + "<br>" +
+        "Eelistatud stiil: " + s;
 }
 
+
 function vormPuhasta() {
-    let v = document.getElementById("ankeet");
-    if (v) v.reset();
+    document.getElementById("ankeet").reset();
 
-    let nimekiri = ["muusikaVastus", "koolVastus", "tunnidVastus", "raadioVastus", "jaamadVastus", "stiilVastus", "kokkuvote"];
-    nimekiri.forEach(function(id) {
-        let el = document.getElementById(id);
-        if (el) el.innerHTML = "";
-    });
-
-    let ala = document.getElementById("kokkuvote");
-    if (ala) ala.className = "";
+    document.getElementById("muusikaVastus").innerHTML = "";
+    document.getElementById("koolVastus").innerHTML = "";
+    document.getElementById("tunnidVastus").innerHTML = "";
+    document.getElementById("raadioVastus").innerHTML = "";
+    document.getElementById("jaamadVastus").innerHTML = "";
+    document.getElementById("stiilVastus").innerHTML = "";
+    document.getElementById("kokkuvote").innerHTML = "";
 
     for (let i = 1; i <= 6; i++) {
         let pilt = document.getElementById("pilt" + i);
-        if (pilt) pilt.style.display = "none";
+        pilt.style.display = "none";
     }
 }
