@@ -51,3 +51,7 @@ img {
 .nupud {
     text-align: center;
 }
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background-color: lightblue;
+}
