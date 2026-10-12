@@ -1,3 +1,8 @@
+section#yld{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 section#osa1{
     border: 1pt solid black;
     border-radius: 10pt;
@@ -30,4 +35,15 @@ label:hover{/*fookuses*/
     border-radius: 10px;
     border: 1pt solid black;
     padding: 2px;
+}
+section#osa2{
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 40%;
+}
+img#pilt{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
