@@ -55,11 +55,11 @@ function tanaOn() {
 }
 
 function arvutaSynnipaevani() {
-    const before = new Date(2027, 8, 2); // Kuu 8 on september
+    const before = new Date(2027, 8, 2); // aasta, kuu, päev
     const now = new Date();
 
     const ms = before.getTime() - now.getTime();
-    const paevad = ms / (1000 * 60 * 60 * 24);
+    const paevad = ms / (1000 * 60 * 60 * 24); //päevades
 
     const paevadTaisarvuna = Math.ceil(paevad);
 
