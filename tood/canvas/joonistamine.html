@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Joonistamisrakendus canvas-ga</title>
+    <link rel="stylesheet" href="canvasStyle.css">
+    <script src="joonisScript.js"></script>
+</head>
+<body>
+<h1>Joonistamisrakendus canvas-ga</h1>
+<input type="button" value="Puhasta" onclick="puhasta()">
+<canvas id="tahvel" width="300" height="400"></canvas>
+<input type="button" value="Joon" onclick="sirgeJoon()">
+<br>
+<input type="button" value="Kolmnurk" onclick="kolmnurk()">
+<br>
+<input type="button" value="Ristkülik" onclick="ristkylik()">
+<label for="laius">Laius</label>
+<input type="number" min="1" max="300" step="10" id="laius" value="100" onchange="ristkylik()">
+<label for="korgus">Kõrgus</label>
+<input type="number" min="1" max="300" step="10" id="korgus" value="100" onchange="ristkylik()">
+<br>
+<input type="button" value="ring" onclick="ring()">
+<label for="raadius">Raadius</label>
+<input type="number" min="1" max="150" step="1" id="raadius" value="50" onchange="ring()">
+<input type="color" id="varv" value="#0000ff" onchange="ring()">
+<br><br>
+
+<!-- Roboti osad -->
+<input type="button" value="Nägu" onclick="nagu()">
+<input type="button" value="Nina" onclick="nina()">
+<input type="button" value="Kõrvad" onclick="korvad()">
+<input type="button" value="Suu" onclick="suu()">
+<br><br>
+<!-- Vasak silm -->
+<input type="button" value="Vasak silm" onclick="vasakSilm()">
+<label for="vSilmRaadius">Silm:</label>
+<input type="number" min="1" max="100" id="vSilmRaadius" value="25" onchange="vasakSilm()">
+<label for="vSisuRaadius">Sisu:</label>
+<input type="number" min="1" max="50" id="vSisuRaadius" value="5" onchange="vasakSilmSisu()">
+<input type="button" value="Täpp" onclick="vasakSilmSisu()">
+<br>
+<!-- Parem silm -->
+<input type="button" value="Parem silm" onclick="paremSilm()">
+<label for="pSilmRaadius">Silm:</label>
+<input type="number" min="1" max="100" id="pSilmRaadius" value="25" onchange="paremSilm()">
+<label for="pSisuRaadius">Sisu:</label>
+<input type="number" min="1" max="50" id="pSisuRaadius" value="5" onchange="paremSilmSisu()">
+<input type="button" value="Täpp" onclick="paremSilmSisu()">
+
+</body>
+</html>
