@@ -167,3 +167,16 @@ function paremSilmSisu() {
         t.fill();
     }
 }
+//pilt failis
+function pilt(){ //drawImage()
+    const tahvel=document.getElementById("tahvel");
+    if(tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        const fail=new Image();
+        fail.src="https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/aac7/live/66fb3490-ca0d-11f0-86af-23a21b51892f.jpg";
+        fail.onload=()=>{
+            t.drawImage(fail, 50, 50, 100, 100);
+        }
+    }
+}
+
