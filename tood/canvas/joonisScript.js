@@ -167,6 +167,19 @@ function paremSilmSisu() {
         t.fill();
     }
 }
+function joonistaKoguNagu() {
+    // 1. Puhastame esmalt tahvli, et näod ei läheks üksteise peale
+    puhasta();
+    korvad();
+    nagu();
+    nina();
+    suu();
+    vasakSilm();
+    vasakSilmSisu();
+    paremSilm();
+    paremSilmSisu();
+}
+
 //pilt failis
 function pilt(){ //drawImage()
     const tahvel=document.getElementById("tahvel");
