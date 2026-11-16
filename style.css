@@ -134,6 +134,17 @@ nav ul li a {
     padding: 15px;
     background-color: #fffbfb;
 }
+section#osa1 {
+    padding: 5%;
+    border: 1px solid purple;
+    margin: 5%;
+    width: 25%;
+    position: relative;
+}
+
+.nupud {
+    margin-top: 20px;
+}
 
 
 
