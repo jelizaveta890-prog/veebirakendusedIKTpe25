@@ -17,6 +17,7 @@ table {
 td {
     border: 1px solid black;
     padding: 10px;
+    vertical-align: top;
 }
 
 input[type="text"] {
@@ -44,13 +45,24 @@ input[type="reset"] {
 }
 
 img {
+    display: none;
     max-width: 200px;
     max-height: 240px;
+    margin-top: 10px;
 }
 
-.nupud {
-    text-align: center;
+.viga {
+    color: red;
+    display: none;
+    font-weight: bold;
+    margin-top: 5px;
 }
+
+#kokkuvote {
+    font-weight: bold;
+    color: darkblue;
+}
+
 input[type="button"]:hover,
 input[type="reset"]:hover {
     background-color: lightblue;

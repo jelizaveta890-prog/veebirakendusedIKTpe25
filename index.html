@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Jelizaveta veebirakenduste aluste tööd</title>
-
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
           integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
           crossorigin="anonymous"></script>
@@ -15,20 +14,26 @@
 
   <script>
     $(document).ready(function() {
+      // Teeb kasti lohistatavaks
       $('#osa1').draggable();
 
-      // Paremale nupu vajutamine
+      // Nupp paremale
       $('#paremale').click(function(){
         $('#osa1').animate({left: '200px'}, 1000);
         $(this).hide();
         $('#vasakule').show();
       });
 
-      // Vasakule nupu vajutamine
+      // Nupp vasakule
       $('#vasakule').click(function(){
         $('#osa1').animate({left: '0px'}, 1000);
         $(this).hide();
         $('#paremale').show();
+      });
+
+      // Uus efekt (slideToggle)
+      $('#efektiNupp').click(function(){
+        $('#lisatekst').slideToggle(1000);
       });
     });
   </script>
@@ -42,7 +47,7 @@
   <h1>Jelizaveta veebirakenduste aluste tööd</h1>
 </header>
 
-<!-- Navigeerimismenüü -->
+<!-- Menüü -->
 <nav>
   <ul>
     <li><a href="index.html">Avaleht</a></li>
@@ -53,19 +58,31 @@
   </ul>
 </nav>
 
-<!-- Sisu -->
 <section id="osa1">
   <h2>Tere tulemast!</h2>
   <p>See on veebirakenduste tunnis käsitsi kirjutatud leht!</p>
   <br>
-  <p>Palun kasuta navigeerimismenüü, et leida info!</p>
-
-  <div class="nupud">
-    <input type="button" value="paremale" id="paremale">
-    <input type="button" value="vasakule" id="vasakule" style="display:none;">
-  </div>
+  <p>Palun kasuta navigeerimismenüüd, et leida info!</p>
 </section>
 
+  <input type="button" value="paremale" id="paremale">
+  <input type="button" value="vasakule" id="vasakule" style="display:none;">
+
+
+<section id="juhend">
+  <h2>jQuery kasutusjuhend</h2>
+  <p>Kuidas lehel efekte kasutada:</p>
+  <ul>
+    <li><b>Lohistamine:</b> "Tere tulemast!" kasti saab hiirega lohistada.</li>
+    <li><b>Animatsioon:</b> Vajuta nuppu "paremale" või "vasakule".</li>
+    <li><b>Uus efekt:</b> Vajuta nuppu, et näha/peita lisateksti.</li>
+  </ul>
+
+  <button id="efektiNupp">Näita / peida lisateksti</button>
+  <p id="lisatekst" style="display:none; color: purple; margin-top: 10px;">See on uus slideToggle efekt!</p>
+</section>
+
+<!-- OSA 2 -->
 <main>
   <section id="osa2">
     <h2>Päevapilt</h2>
@@ -73,13 +90,13 @@
       <img src="Lill.png" alt="See on roosa lill" id="erapilt">
     </div>
 
+    <br>
     <div>
       <button onclick="tanaOn()">TÄNA ON</button>
       <button onclick="arvutaSynnipaevani()">Minu sünnipäevani</button>
     </div>
     <br>
-    <div id="vastus" style="margin-top: 15px; font-weight: bold;"></div>
-    <br>
+    <div id="vastus" style="font-weight: bold;"></div>
   </section>
 </main>
 

@@ -134,16 +134,66 @@ nav ul li a {
     padding: 15px;
     background-color: #fffbfb;
 }
+
 section#osa1 {
     padding: 5%;
     border: 1px solid purple;
     margin: 5%;
     width: 25%;
     position: relative;
+    background-color: white;
 }
 
-.nupud {
-    margin-top: 20px;
+section#osa2 {
+    padding: 5%;
+    border: 1px solid green;
+    margin: 5%;
+    width: 20%;
+    background-color: white;
+}
+
+#juhend {
+    padding: 5%;
+    border: 1px dashed purple;
+    margin: 5%;
+    width: 30%;
+    background-color: #fffbfb;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightpink;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: dimgray;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-left: 3px solid lightpink;
+}
+
+nav ul li a:hover {
+    background-color: pink;
+}
+
+nav {
+    padding: 2%;
+    margin: 10px;
+}
+
+img#erapilt {
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid lightcoral;
 }
 
 
