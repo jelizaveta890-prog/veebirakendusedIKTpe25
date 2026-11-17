@@ -196,5 +196,18 @@ img#erapilt {
     border: 3px solid lightcoral;
 }
 
+#vasakule {
+    display: none;
+}
+
+#lisatekst {
+    display: none;
+    color: purple;
+    margin-top: 10px;
+}
+
+section#osa1 {
+    position: relative;
+}
 
 
