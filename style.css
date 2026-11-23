@@ -209,11 +209,12 @@ nav ul li ul li {
 nav ul li:hover > ul {
     display: block;
 }
+/* vihjemull */
 #vihje {
-    position: absolute;
-    z-index: 9999;
-    color: #fff;
-    font-size: 10px;
-    background-color: deeppink;
-    padding: 5px 25px;
+    position:absolute;
+    z-index:9999;
+    color:#fff;
+    font-size:10px;
+    background-color:deeppink;
+    padding:5px 25px;
 }
