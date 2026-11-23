@@ -33,6 +33,28 @@
       $('#efektiNupp').click(function(){
         $('#lisatekst').slideToggle(1000);
       });
+      $('ul').addClass('ul_kujundus');
+      $('ul li ul li').addClass('li_kujundus');
+
+      $('a').hover(function(event){
+                $(this).addClass('hover');
+              },
+              function(){
+                $(this).removeClass('hover');
+              });
+      $('.vihjemull').mouseover(function(e) {
+        var mull = $(this).attr('title');
+        $(this).attr('title','');
+        $(this).append('<div id="vihje">' + mull + '</div>');
+        $('#vihje').fadeIn('500');
+        $('#vihje').fadeTo('10',0.9);
+      }).mousemove(function(e) {
+        $('#vihje').css('top', e.pageY + 10 );
+        $('#vihje').css('left', e.pageX + 20 );
+      }).mouseout(function() {
+        $(this).attr('title',$('#vihje').html());
+        $(this).children('div#vihje').remove();
+      });
     });
   </script>
 
@@ -48,11 +70,18 @@
 <!-- Menüü -->
 <nav>
   <ul>
-    <li><a href="index.html">Avaleht</a></li>
+    <li><a href="index.html" title="Mine pealehele ja vaata avalehe infot">Avaleht</a></li>
     <li><a href="kontakt.html">Kontakt</a></li>
-    <li><a href="tehtud.html">Tehtud tööd</a></li>
-    <li><a href="lingid.html">Kasulikud lingid</a></li>
-    <li><a href="meedia.html">Meedia</a></li>
+    <li>
+      <a href="tehtud.html" title="Vaata kõiki tehtud koolitöid ja projekte">Tehtud tööd</a>
+      <ul>
+        <li><a href="https://minuveebileht5.wordpress.com/">1.kursuse WP leht</a></li>
+        <li><a href="kujundus2/index.html">Leht teise kujundusega</a></li>
+        <li><a href="tood/tabelid.html">Tabelid</a></li>
+      </ul>
+    </li>
+    <li><a href="lingid.html" title="Kasulikud materjalid ja viited">Kasulikud lingid</a></li>
+    <li><a href="meedia.html" title="Vaata pilte, videoid ja multimeediat">Meedia</a></li>
   </ul>
 </nav>
 
@@ -66,6 +95,7 @@
   <input type="button" value="vasakule" id="vasakule">
 </section>
 
+<!-- Juhend -->
 <section id="juhend">
   <h2>jQuery kasutusjuhend</h2>
   <p>Kuidas lehel efekte kasutada:</p>
@@ -81,15 +111,17 @@
 
 <main>
   <section id="osa2">
-    <h2>Päevapilt</h2>
-    <div>Ise tehtud pilt
-      <img src="Lill.png" alt="See on roosa lill" id="erapilt">
+    <h2 class="vihjemull" title="Päeva pildi pealkiri">Päevapilt</h2>
+
+    <div class="vihjemull" title="See on ise tehtud joonistus">
+      Ise tehtud pilt
+      <img src="Lill.png" alt="See on roosa lill" id="erapilt" class="vihjemull" title="Roosa lille pilt">
     </div>
 
     <br>
     <div>
-      <button onclick="tanaOn()">TÄNA ON</button>
-      <button onclick="arvutaSynnipaevani()">Minu sünnipäevani</button>
+      <button onclick="tanaOn()" class="vihjemull" title="Näita tänast kuupäeva">TÄNA ON</button>
+      <button onclick="arvutaSynnipaevani()" class="vihjemull" title="Arvuta päevad sünnipäevani">Minu sünnipäevani</button>
     </div>
     <br>
     <div id="vastus"></div>
@@ -99,7 +131,7 @@
 <!-- Jalus -->
 <footer>
   <div>
-    Jeizaveta leht
+    Jelizaveta leht
   </div>
 </footer>
 

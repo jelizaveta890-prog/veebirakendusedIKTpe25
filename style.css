@@ -160,16 +160,23 @@ section#osa2 {
     background-color: #fffbfb;
 }
 
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: lightpink;
+    background-color: transparent;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
 }
 
 nav ul li {
     float: left;
+    position: relative;
 }
 
 nav ul li a {
@@ -177,37 +184,36 @@ nav ul li a {
     color: dimgray;
     text-decoration: none;
     text-align: center;
-    padding: 10px;
-    border-left: 3px solid lightpink;
+    padding: 10px 15px;
 }
 
 nav ul li a:hover {
     background-color: pink;
 }
 
-nav {
-    padding: 2%;
-    margin: 10px;
-}
-
-img#erapilt {
-    width: 100px;
-    border-radius: 50%;
-    border: 3px solid lightcoral;
-}
-
-#vasakule {
+nav ul li ul {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 
-#lisatekst {
-    display: none;
-    color: purple;
-    margin-top: 10px;
+nav ul li ul li {
+    float: none;
 }
 
-section#osa1 {
-    position: relative;
+nav ul li:hover > ul {
+    display: block;
 }
-
-
+#vihje {
+    position: absolute;
+    z-index: 9999;
+    color: #fff;
+    font-size: 10px;
+    background-color: deeppink;
+    padding: 5px 25px;
+}
