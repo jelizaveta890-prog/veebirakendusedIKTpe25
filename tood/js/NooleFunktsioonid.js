@@ -117,12 +117,16 @@
 // teostaAJAXPäring("https://api.example.com/data", callbackFunktsioon);
 
 
+let tulemusTekst = "";
+
 function klassikalineNimi() {
-    document.write("Jelizaveta Sukhomlynova<br>");
+    console.log("Jelizaveta Sukhomlynova");
+    tulemusTekst += "<p>Jelizaveta Sukhomlynova</p>";
 }
 
 const nooleNimi = () => {
-    document.write("Jelizaveta Sukhomlynova<br>");
+    console.log("Jelizaveta Sukhomlynova");
+    tulemusTekst += "<p>Jelizaveta Sukhomlynova</p>";
 };
 
 klassikalineNimi();
@@ -142,7 +146,9 @@ const kuupaevEesti = (kuupaev) => {
     const kuuNum = parseInt(kuuTekst);
     const kuuNimi = kuud[kuuNum - 1];
 
-    document.write(paev + "." + kuuTekst + "." + aasta + "<br>");
+    const kuup = paev + "." + kuuTekst + "." + aasta;
+    console.log(kuup);
+    tulemusTekst += "<p>" + kuup + "</p>";
 };
 
 kuupaevEesti("29.10.26");
@@ -158,16 +164,17 @@ const arvutaMituJaKeskmine = (...arvud) => {
 
     const keskmine = summa / koguarv;
 
-    document.write("Arve kokku: " + koguarv + "<br>");
-    document.write("Keskmine: " + keskmine + "<br>");
+    console.log("Arve kokku: " + koguarv);
+    console.log("Keskmine: " + keskmine);
+    tulemusTekst += "<p>Arve kokku: " + koguarv + "</p>";
+    tulemusTekst += "<p>Keskmine: " + keskmine + "</p>";
 };
 
 arvutaMituJaKeskmine(6, 12, 4, 8, 30, 48);
 
 
-
 const salajaneSonum = (sonum) => {
-    let täishäälikud = "aeiouõäööyuAEIOUÕÄÖÜYU";
+    let täishäälikud = "aeiouõäöüAEIOUÕÄÖÜ";
     let vastus = "";
 
     for (let i = 0; i < sonum.length; i++) {
@@ -187,11 +194,11 @@ const salajaneSonum = (sonum) => {
         }
     }
 
-    document.write(vastus + "<br>");
+    console.log(vastus);
+    tulemusTekst += "<p>" + vastus + "</p>";
 };
 
-salajaneSonum("T*r* m***im");
-
+salajaneSonum("Tere maailm");
 
 
 const leiaUnikaalsedNimed = (massiiv) => {
@@ -201,22 +208,22 @@ const leiaUnikaalsedNimed = (massiiv) => {
         let nimi = massiiv[i];
         let olemas = false;
 
-
         for (let j = 0; j < tulemus.length; j++) {
             if (tulemus[j] === nimi) {
                 olemas = true;
             }
         }
 
-
         if (olemas === false) {
             tulemus.push(nimi);
         }
     }
 
-    document.write(tulemus.join(",") + "<br>");
+    console.log(tulemus);
+    tulemusTekst += "<p>" + tulemus.join(",") + "</p>";
 };
 
-// Test
 const prooviNimed = ["Kati", "Mati", "Kati", "Mari", "Mati", "Jüri"];
 leiaUnikaalsedNimed(prooviNimed);
+
+document.getElementById("vastus2").innerHTML = tulemusTekst;
