@@ -209,12 +209,21 @@ nav ul li ul li {
 nav ul li:hover > ul {
     display: block;
 }
+*#vihje {
+    font-family:arial;
+    font-size:12px;
+}
+a#vihje {
+    text-decoration:none;
+}
+
 /* vihjemull */
 #vihje {
     position:absolute;
+    font-style: inherit;
     z-index:9999;
     color:#fff;
-    font-size:10px;
-    background-color:deeppink;
+    font-size:12px;
+    background-color: #04577a;
     padding:5px 25px;
 }

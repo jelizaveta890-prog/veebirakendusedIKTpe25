@@ -42,6 +42,8 @@
               function(){
                 $(this).removeClass('hover');
               });
+
+      // Vihjemulli loogika
       $('.vihjemull').mouseover(function(e) {
         var mull = $(this).attr('title');
         $(this).attr('title','');
@@ -53,35 +55,6 @@
         $('#vihje').css('left', e.pageX + 20 );
       }).mouseout(function() {
         $(this).attr('title',$('#vihje').html());
-        $(this).children('div#vihje').remove();
-      });
-    });
-  </script>
-
-  <script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    $(function() {
-      //selekteerime class="vihjemull"
-      $('.vihjemull').mouseover(function(e) {
-        //Lisame <title> atribuudi väärtuse muutujasse
-        var mull = $(this).attr('title');
-        //Eemaldame <title> atribuudi, et ei oleks topelt vihjemulli
-        $(this).attr('title','');
-        //Lisame elemendi sisse <div> elemendi koos muutuja 'mull' väärtusega
-        $(this).append('<div id="vihje">' + mull + '</div>');
-        //Kuva efektiga vihjemull
-        $('#vihje').fadeIn('500');
-        $('#vihje').fadeTo('10',0.9);
-
-      }).mousemove(function(e) {
-        // muudame jutumulli asukoht koos hiirekordinaatidega
-        $('#vihje').css('top', e.pageY + 10 );
-        $('#vihje').css('left', e.pageX + 20 );
-
-      }).mouseout(function() {
-        //Lisame <title> sisu väärtuse tagasi
-        $(this).attr('title',$('#vihje').html());
-        //ja eemaldame <div> elemendi
         $(this).children('div#vihje').remove();
       });
     });
@@ -142,18 +115,19 @@
   <section id="osa2">
     <h2 class="vihjemull" title="Päeva pildi pealkiri">Päevapilt</h2>
 
+    <p id="ise-tehtud-pilt" class="vihjemull" title="Kiri, mis on ise tehtud">
       Ise tehtud pilt
+    </p>
 
-    <div class="vihjemull" title="Roosa lill">
-      <img src="Lill.png" alt="See on roosa lill" id="erapilt" class="vihjemull" title="Roosa lille pilt">
+    <div class="vihjemull" title="Roosa lille pilt">
+      <img src="Lill.png" alt="Roosa lill">
     </div>
 
-    <br>
     <div>
       <button onclick="tanaOn()" class="vihjemull" title="Näita tänast kuupäeva">TÄNA ON</button>
       <button onclick="arvutaSynnipaevani()" class="vihjemull" title="Arvuta päevad sünnipäevani">Minu sünnipäevani</button>
     </div>
-    <br>
+
     <div id="vastus"></div>
   </section>
 </main>
