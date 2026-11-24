@@ -117,86 +117,69 @@
 // teostaAJAXPäring("https://api.example.com/data", callbackFunktsioon);
 
 
-
-
-// 1. Erinevad funktsioonid
-
-// Tavaline klassikaline funktsioon
 function klassikalineNimi() {
-    console.log("Kati");
+    document.write("Jelizaveta Sukhomlynova<br>");
 }
 
-// Lihtne noolefunktsioon
 const nooleNimi = () => {
-    console.log("Kati");
+    document.write("Jelizaveta Sukhomlynova<br>");
 };
 
-// Käivitame mõlemad
 klassikalineNimi();
 nooleNimi();
 
 
-// 2. Argumendiga funktsioon
 const kuupaevEesti = (kuupaev) => {
     const kuud = [
         "jaanuar", "veebruar", "märts", "aprill", "mai", "juuni",
         "juuli", "august", "september", "oktoober", "november", "detsember"
     ];
 
-    // Loeme kuupäeva stringist numbrid käsitsi välja indexi järgi (näiteks "19.07.25")
     const paev = kuupaev[0] + kuupaev[1];
     const kuuTekst = kuupaev[3] + kuupaev[4];
     const aasta = kuupaev[6] + kuupaev[7];
 
-    // Muudame kuu teksti numbriks, et massiivist õige kuu kätte saada
     const kuuNum = parseInt(kuuTekst);
     const kuuNimi = kuud[kuuNum - 1];
 
-    console.log(paev + ". " + kuuNimi + " 20" + aasta);
+    document.write(paev + "." + kuuTekst + "." + aasta + "<br>");
 };
 
-// Test
-kuupaevEesti("19.07.25");
+kuupaevEesti("29.10.26");
 
 
-// 3. Teadmata hulk
 const arvutaMituJaKeskmine = (...arvud) => {
     const koguarv = arvud.length;
     let summa = 0;
 
-    // Kõige tavalisem for-tsükkel arvude kokku liitmiseks
     for (let i = 0; i < arvud.length; i++) {
         summa = summa + arvud[i];
     }
 
     const keskmine = summa / koguarv;
 
-    return "Koguarv: " + koguarv + ", Keskmine: " + keskmine;
+    document.write("Arve kokku: " + koguarv + "<br>");
+    document.write("Keskmine: " + keskmine + "<br>");
 };
 
-// Test
-console.log(arvutaMituJaKeskmine(6, 12, 4, 8));
+arvutaMituJaKeskmine(6, 12, 4, 8, 30, 48);
 
 
 
-// 4. Salajane sõnum
 const salajaneSonum = (sonum) => {
     let täishäälikud = "aeiouõäööyuAEIOUÕÄÖÜYU";
     let vastus = "";
 
-    // Käime sõnumi tähehaaval läbi
     for (let i = 0; i < sonum.length; i++) {
         let taht = sonum[i];
         let onTäishäälik = false;
 
-        // Kontrollime käsitsi teise tsükliga, kas täht on täishäälikute nimekirjas
         for (let j = 0; j < täishäälikud.length; j++) {
             if (taht === täishäälikud[j]) {
                 onTäishäälik = true;
             }
         }
 
-        // Kui oli täishäälik, paneme tärni, muidu jääb sama täht
         if (onTäishäälik === true) {
             vastus = vastus + "*";
         } else {
@@ -204,53 +187,36 @@ const salajaneSonum = (sonum) => {
         }
     }
 
-    return vastus;
+    document.write(vastus + "<br>");
 };
 
-// Test
-console.log(salajaneSonum("Salajane sõnum"));
+salajaneSonum("T*r* m***im");
 
 
 
-// 5. Unikaalsed nimed
 const leiaUnikaalsedNimed = (massiiv) => {
     let tulemus = [];
 
-    // Käime algse massiivi läbi
     for (let i = 0; i < massiiv.length; i++) {
         let nimi = massiiv[i];
         let olemas = false;
 
-        // Kontrollime, kas see nimi juba on meie uues tulemuse massiivis
+
         for (let j = 0; j < tulemus.length; j++) {
             if (tulemus[j] === nimi) {
                 olemas = true;
             }
         }
 
-        // Kui nime veel uues massiivis pole, siis lisame
+
         if (olemas === false) {
             tulemus.push(nimi);
         }
     }
 
-    return tulemus;
+    document.write(tulemus.join(",") + "<br>");
 };
 
 // Test
 const prooviNimed = ["Kati", "Mati", "Kati", "Mari", "Mati", "Jüri"];
-console.log(leiaUnikaalsedNimed(prooviNimed));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+leiaUnikaalsedNimed(prooviNimed);
